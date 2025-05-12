@@ -87,5 +87,9 @@ A clean, cyber-themed interface that:
 ### Under the Hood
 The application normalizes different data formats into a consistent structure, making it easier to work with and display. This approach also makes it simple to add new data sources in the future.
 
+### Sample Screen 
+![image](https://github.com/user-attachments/assets/49178d9e-2745-45be-8dc7-6e2510229b2c)
+
+
 ---
 Happy hunting! This dashboard helps security teams quickly analyze IP reputation data for better threat intelligence.
