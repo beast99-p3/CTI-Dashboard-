@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTI Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <h1>CTI Dashboard</h1>
+    
+    <div id="filters-container">
+        <label for="ip-filter">Filter by IP:</label>
+        <input type="text" id="ip-filter" placeholder="Filter by IP...">
+        <button id="search-ip-button">Search IP</button>
+        
+        <label for="score-filter">Abuse Confidence Score:</label>
+        <select id="score-filter">
+            <option value="any">Any</option>
+            <option value="low">Low (0-40)</option>
+            <option value="medium">Medium (41-79)</option>
+            <option value="high">High (80-100)</option>
+        </select>
+    </div>
+    
+    <div id="table-container">
+        <table id="cti-table">
+            <thead>
+                <tr>
+                    <th>IP Address</th>
+                    <th>Source</th>
+                    <th>Abuse Score</th>
+                    <th>ISP</th>
+                    <th>Country</th>
+                    <th>Total Reports</th>
+                    <th>Last Reported</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody id="cti-table-body">
+                <!-- Data rows will be injected here -->
+            </tbody>
+        </table>
+    </div>
+    
+    <div id="chart-container">
+        <canvas id="ctiChart"></canvas>
+    </div>
+</body>
+</html>
